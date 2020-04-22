@@ -1,0 +1,31 @@
+server:
+  port: 5150
+
+spring:
+  application:
+    name: 'auth-server'
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springcloud
+    username: postgres
+    password: admin
+    hikari:
+      connectionTimeout: 20000
+      maximumPoolSize: 5
+    
+jpa:
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      ddl-auto: update #drop n create table again, good for testing, comment this in production
+
+jwt:
+  token:
+    expiration: 86400000
+    password: a$djs&3jdkg0;djsimxhfn%abd
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
