@@ -5,7 +5,7 @@ spring:
   application:
     name: 'auth-server'
   datasource:
-    url: jdbc:postgresql://localhost:5432/springcloud
+    url: jdbc:postgresql://${POSTGRES_SERVER}:5432/springcloud
     username: postgres
     password: admin
     hikari:
@@ -28,4 +28,4 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: ${EUREKA_SERVER}#http://localhost:8761/eureka
+      defaultZone: ${EUREKA_SERVER}
