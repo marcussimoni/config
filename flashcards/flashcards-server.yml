@@ -23,9 +23,8 @@ spring:
     hikari:
       connectionTimeout: 20000
       maximumPoolSize: 5
-
-jpa:
-  properties:
-    hibernate:
-      dialect: org.hibernate.dialect.PostgreSQLDialect
-      ddl-auto: update #drop n create table again, good for testing, comment this in production    
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        ddl-auto: update #drop n create table again, good for testing, comment this in production    
