@@ -17,7 +17,7 @@ spring:
   application:
     name: 'flashcards-server'
   datasource:
-    url: jdbc:postgresql://localhost:5432/springcloud
+    url: ${DATASOURCE_URL}
     username: postgres
     password: admin
     hikari:
